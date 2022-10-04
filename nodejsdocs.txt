@@ -1,0 +1,34 @@
+Node.js is an open-source and cross-platform JavaScript runtime environment. It is a popular tool for almost any kind of project!
+Node.js allows you to run JavaScript on the server.Node.js is free. Node.js runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)
+It uses asynchronous programming and can generate dynamic page content.
+
+Node.js can create, open, read, write, delete, and close files on the server
+Node.js can collect form data
+Node.js files contain tasks that will be executed on certain events
+A typical event is someone trying to access a port on the server
+Node.js files must be initiated on the server before having any effect
+Node.js files have extension ".js"
+
+A Node.js app runs in a single process, without creating a new thread for every request. Node.js provides a set of asynchronous I/O primitives in its standard library that prevent JavaScript code from blocking and generally, libraries in Node.js are written using non-blocking paradigms, making blocking behavior the exception rather than the norm.Node.js has a unique advantage because millions of frontend developers that write JavaScript for the browser are now able to write the server-side code in addition to the client-side code without the need to learn a completely different language.
+
+
+#Download Node.js from official Node.js website : https://nodejs.org
+
+#Create a Node.js file named "index.js":
+
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World\n');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+#Run node index.js in your terminal.
